@@ -148,7 +148,7 @@ public class Base2 {
 		}
 		public static void waitbrowser(String type,int sec) throws Exception {
 			if (type.equalsIgnoreCase("wait")) {
-				driver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
 			} else if (type.equalsIgnoreCase("longwait")) {
 				Thread.sleep(sec);
 			} 

@@ -17,7 +17,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue = "com.sd",
 
 		monochrome = true, 
-		dryRun = false, 
+		dryRun = true, 
 		publish = true,
 
 		

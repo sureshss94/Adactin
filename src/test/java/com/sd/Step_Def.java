@@ -79,7 +79,6 @@ public class Step_Def extends Base_Class {
 	public void user_click_on_the_login_button_and_it_navigates_to_search_hotel_page() throws Exception {
 
 		clickonElement("click", pom.get_instance_login().getLogin());
-		
 		waitbrowser("wait", 10);
 	}
 

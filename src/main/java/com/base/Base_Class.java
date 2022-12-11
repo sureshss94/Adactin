@@ -22,6 +22,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Base_Class {
 
 	public static WebDriver driver;
@@ -31,8 +33,9 @@ public class Base_Class {
 	public static WebDriver browser_Configuration(String type) {
 
 		if (type.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\Driver\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
+//			System.setProperty("webdriver.chrome.driver",
+//					System.getProperty("user.dir") + "\\Driver\\chromedriver.exe");
 
 			driver = new ChromeDriver();
 
@@ -148,6 +151,7 @@ public class Base_Class {
 	
 	}
 	public static void waitbrowser(String type,int sec) throws Exception {
+		
 		if (type.equalsIgnoreCase("wait")) {
 			driver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
 		} else if (type.equalsIgnoreCase("longwait")) {
